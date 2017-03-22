@@ -96,7 +96,7 @@ SELECT     b.NAME,
                   SELECT c.val 
                   FROM   payment c 
                   WHERE  a.agentext = c.agentext 
-                  AND    c.paymentid < a.paymentid limit 1) 
+                  AND    c.dte < a.dte limit 1) 
 FROM       payment a 
 INNER JOIN kon_agents b 
 ON         a.agentext = b.agentid 
