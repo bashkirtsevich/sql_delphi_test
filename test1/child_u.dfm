@@ -1,0 +1,37 @@
+object frmChild: TfrmChild
+  Left = 190
+  Top = 110
+  Width = 410
+  Height = 269
+  Caption = 'frmChild'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  OldCreateOrder = False
+  Position = poDefault
+  Visible = True
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lblTitle: TLabel
+    Left = 0
+    Top = 0
+    Width = 402
+    Height = 235
+    Align = alClient
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'lblTitle'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -21
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    Layout = tlCenter
+  end
+end
