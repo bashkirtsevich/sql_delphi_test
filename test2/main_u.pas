@@ -46,39 +46,6 @@ begin
   Close;
 end;
 
-{
-procedure sh1(SheetIndex:integer);
-Var
-  Xlapp1, Sheet:Variant ;
-  MaxRow, MaxCol,X, Y:integer ;
-  str:string;
-  arrData:Variant;
-begin
-  Str:=trim(form1.OpenDialog1.FileName);
-
-  XLApp1 := createoleobject('excel.application');
-  XLApp1.Workbooks.open(Str) ;
-
-  Sheet := XLApp1.WorkSheets[SheetIndex] ;
-
-  MaxRow := Sheet.Usedrange.EntireRow.count ;
-  MaxCol := sheet.Usedrange.EntireColumn.count;
-
-  //read the used range to a variant array
-  arrData:= Sheet.UsedRange.Value;
-
-  form1.stringgrid1.RowCount:=maxRow+1;
-  form1.StringGrid1.ColCount:=maxCol+1;
-
-  for x:=1 to maxCol do
-    for y:=1 to maxRow do
-      //copy data to grid
-      form1.stringgrid1.Cells[x,y]:=arrData[y, x]; // do note that the indices are reversed (y, x)
-
-  XLApp1.Workbooks.close;
-end;
-}
-
 procedure TfrmMain.btnOpenClick(Sender: TObject);
 
   function AddLastName(const ALastName: string): Boolean;
